@@ -3,7 +3,7 @@
 	"description": "Collapses all Matrix blocks on entry load. Adds one-click block toggling.",
 	"type": "craft-plugin",
 	"version": "1.0.0",
-	"keywords": ["matrix snap", "matrixsnap", "matrix", "matrixblock", "snap", "usability", "productivity"],
+	"keywords": ["matrix snap", "matrixsnap", "matrix", "matrix block", "matrixblock", "snap", "usability", "productivity"],
 	"license": "proprietary",
 	"authors": [
 		{
