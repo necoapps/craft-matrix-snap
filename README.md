@@ -15,6 +15,6 @@ This plugin requires Craft 3.5+ or Craft 4.0+.
 `cd /your/project/path`
 
 2. Download the plugin with Composer:
-`composer install necoapps/craft-matrix-snap`
+`composer require necoapps/craft-matrix-snap`
 
 3. In the browser, go to the Control Panel → Settings → Plugins. Find Matrix Snap and click Install.
