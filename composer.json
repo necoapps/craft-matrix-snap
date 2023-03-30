@@ -1,0 +1,33 @@
+{
+	"name": "necoapps/craft-matrix-snap",
+	"description": "Collapses all Matrix blocks on entry load. Adds one-click block toggling.",
+	"type": "craft-plugin",
+	"version": "1.0.0",
+	"keywords": ["matrix snap", "matrixsnap", "matrix", "matrixblock", "snap", "usability", "productivity"],
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Necoapps",
+			"homepage": "http://www.necoapps.com"
+		}
+	],
+	"support": {
+		"email": "help@necoapps.com",
+		"issues": "https://github.com/necoapps/craft-matrix-snap/issues?state=open",
+		"source": "https://github.com/necoapps/craft-matrix-snap",
+		"docs": "https://github.com/necoapps/craft-matrix-snap/blob/main/README.md"
+	},
+	"require": {
+		"craftcms/cms": "^3.5|^4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"necoapps\\matrixsnap\\": "src/"
+		}
+	},
+	"extra": {
+		"name": "Matrix Snap",
+		"handle": "matrix-snap",
+		"class": "necoapps\\matrixsnap\\MatrixSnap"
+	}
+}
