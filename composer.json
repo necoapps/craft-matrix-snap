@@ -2,6 +2,7 @@
 	"name": "necoapps/craft-matrix-snap",
 	"description": "Collapses all Matrix blocks on entry load. Adds one-click block toggling.",
 	"type": "craft-plugin",
+	"version": "1.0.2",
 	"keywords": ["matrix snap", "matrixsnap", "matrix", "matrix block", "matrixblock", "snap", "usability", "productivity"],
 	"license": "proprietary",
 	"authors": [
