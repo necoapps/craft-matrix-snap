@@ -2,6 +2,15 @@
 	if (!window.Craft || !window.jQuery) return;
 
 	Craft.MatrixSnapPlugin = {
+		checkMode: function() {
+			// is revision mode (Craft 3, 4) active?
+			if ($('input[name="revisionId"], input[value="elements/revert"]').length) {
+				return;
+			};
+
+			Craft.MatrixSnapPlugin.init();
+		},
+
 		init: function() {
 			$('.matrixblock').addClass('is-faux-collapsed'); // gets removed in collapseAll().
 
@@ -55,5 +64,5 @@
 		}
 	};
 
-	Craft.MatrixSnapPlugin.init();
+	Craft.MatrixSnapPlugin.checkMode();
 })(window);
