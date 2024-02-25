@@ -14,11 +14,37 @@
 		init: function() {
 			$('.matrixblock').addClass('is-faux-collapsed'); // gets removed in collapseAll().
 
-			Craft.MatrixSnapPlugin.attachClickEvents();
+			Craft.MatrixSnapPlugin.prepareToCollapseAll(0);
+		},
 
-			setTimeout(function() {
+		prepareToCollapseAll: function(attempts) {
+			attempts++;
+
+			if (attempts > 10) {
+				// safety measure: the plugin is failing to initialise; revert to native behaviour
+				$('.matrixblock').removeClass('is-faux-collapsed');
+				return;
+			};
+
+			var matrixblockCount = 0,
+				dataCheck = 0;
+
+			$('.matrixblock').each(function() {
+				matrixblockCount++;
+
+				if ($(this).data('block')) {
+					dataCheck++;
+				};
+			});
+
+			if (matrixblockCount == dataCheck) {
+				Craft.MatrixSnapPlugin.attachClickEvents();
 				Craft.MatrixSnapPlugin.collapseAll();
-			}, 200);
+			} else {
+				setTimeout(function() {
+					Craft.MatrixSnapPlugin.prepareToCollapseAll(attempts);
+				}, 250);
+			};
 		},
 
 		attachClickEvents: function() {
